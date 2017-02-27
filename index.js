@@ -21,6 +21,8 @@ program
 
 if(!valid){
   console.log(chalk.bold.red("A file location and an amount of codes to be generated must be specified"));
+  console.log(chalk.bold.red("Run gencodes --help for full list of options"));
+  process.exit(1);
 }
 
 //Generate all the codes
