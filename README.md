@@ -14,7 +14,7 @@ After global installation this can be run using the 'gencodes' command with the 
 
 
 Example usage:
-```gencodes  --prefix pp --codelength 40 --mask A --exclusions ABCDEFGHIJK --count 500  ./test.csv```
+``` gencodes  --prefix pp --codelength 40 --mask A --exclusions ABCDEFGHIJK --count 500  ./test.csv ```
 
 Output:
-```PPVNZOTUWSWVSTYOLLPYQLTNLTSYXPVQTSQWQUTQYP```
+``` PPVNZOTUWSWVSTYOLLPYQLTNLTSYXPVQTSQWQUTQYP ```
