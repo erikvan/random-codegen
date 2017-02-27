@@ -1,8 +1,10 @@
-#!/usr/bin/env Node
+#!/usr/bin/env Node --harmony 
 var program = require('commander');
 var _ = require('lodash');
 var fs = require('fs');
 var chalk = require('chalk');
+
+var valid = false;
 
 program
 .arguments('<file>')
@@ -17,9 +19,19 @@ program
 })
 .parse(process.argv);
 
+if(!valid){
+  console.log(chalk.bold.red("A file location and an amount of codes to be generated must be specified"));
+}
 
 //Generate all the codes
 function generateCodes(amount, prefix, codeLength, mask, exclusions, file){
+  valid = true;
+
+  if(!amount){
+    valid = false;
+    return;
+  }
+
   var codes = [];
 
   //Default options
@@ -36,10 +48,7 @@ function generateCodes(amount, prefix, codeLength, mask, exclusions, file){
 
   //Keep it unique
   var uniqueCodes = _.uniq(codes);
-
   saveCodes(file, uniqueCodes)
-
-  
 }
 
 //Getting a random string
