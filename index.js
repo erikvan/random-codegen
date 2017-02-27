@@ -11,7 +11,7 @@ program
 .option('-c, --count <count>', 'The amount of codes to create')
 .option('-p, --prefix <prefix>', 'The prefix for codes')
 .option('-l, --codelength <codelength>', 'The length of each code')
-.option('-m, --mask <mask>', 'The types of letters to include')
+.option('-m, --mask <mask>', 'The types of letters to include A: uppercase, a: lowercase, #: numbers, !:special chars e.g. A#  (will be a combination of uppercase and numbers)')
 .option('-e, --exclusions <exclusions>', 'Specific types of letters to exclude')
 .action(function(file) {
   var codes = [];

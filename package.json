@@ -1,6 +1,6 @@
 {
   "name": "random-code-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A command line tool to generate a csv list of randomly generated codes",
   "main": "index.js",
   "scripts": {
